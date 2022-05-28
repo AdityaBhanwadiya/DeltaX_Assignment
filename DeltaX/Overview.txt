@@ -1,0 +1,3 @@
+I have tried to implement almost all the functionalities mentioned in the document given to me. Except one that is displaying the cover image of song, 
+so for that I have kept it in byte[] format only. I have also attached the screenshots, please have a alook at that. As it was mentioned that UI was not important,
+I haven't made it fancy at all. Just the functionalities are working. 
