@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="songs">
+    <Key>
+      <PropertyRef Name="song_id" />
+    </Key>
+    <Property Name="song_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="song_name" Type="varchar" MaxLength="50" />
+    <Property Name="song_date_of_release" Type="varchar" MaxLength="50" />
+    <Property Name="song_cover_image" Type="varbinary(max)" />
+    <Property Name="song_avg_rating" Type="int" />
+  </EntityType>
+  <EntityType Name="SongScore">
+    <Key>
+      <PropertyRef Name="score_id" />
+    </Key>
+    <Property Name="score_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="song_id" Type="int" Nullable="false" />
+    <Property Name="score" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MyDatabaseModelStoreContainer">
+    <EntitySet Name="songs" EntityType="Self.songs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SongScore" EntityType="Self.SongScore" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

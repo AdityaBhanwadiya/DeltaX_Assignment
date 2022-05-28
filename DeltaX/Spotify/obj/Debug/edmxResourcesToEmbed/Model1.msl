@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyDatabaseModelStoreContainer" CdmEntityContainer="MyDatabaseEntities">
+    <EntitySetMapping Name="songs">
+      <EntityTypeMapping TypeName="MyDatabaseModel.song">
+        <MappingFragment StoreEntitySet="songs">
+          <ScalarProperty Name="song_id" ColumnName="song_id" />
+          <ScalarProperty Name="song_name" ColumnName="song_name" />
+          <ScalarProperty Name="song_date_of_release" ColumnName="song_date_of_release" />
+          <ScalarProperty Name="song_cover_image" ColumnName="song_cover_image" />
+          <ScalarProperty Name="song_avg_rating" ColumnName="song_avg_rating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SongScores">
+      <EntityTypeMapping TypeName="MyDatabaseModel.SongScore">
+        <MappingFragment StoreEntitySet="SongScore">
+          <ScalarProperty Name="score_id" ColumnName="score_id" />
+          <ScalarProperty Name="song_id" ColumnName="song_id" />
+          <ScalarProperty Name="score" ColumnName="score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
